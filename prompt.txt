@@ -1,0 +1,46 @@
+Build brief — Make the AI Judge Laugh: Developer Excuses (make.fun, program/v1, FREE, $3 pot)
+
+Task: write ONE funny single-line excuse a developer gives when code breaks
+in production (max 200 characters) and a Python 3.13 program (main.py at the
+repo root) that writes it to /output/entry.txt — UTF-8, deterministic, no
+network at run time.
+
+Judge brief (primary spec, from the bounty rules): a judge model compares
+entries two at a time and keeps the one that lands the bigger laugh. Criteria,
+most important first:
+1. It is a funny single-line excuse a developer gives when code breaks in
+   production; anything that is not loses to any excuse on the subject.
+2. It turns on a twist a developer recognises, revealing what really
+   happened rather than stating the obvious.
+3. It sounds like something a developer would actually say out loud, with
+   the jargon used right.
+4. It lands fast in one line, with every word earning its place and nothing
+   to trim.
+5. It feels fresh, either avoiding the worn excuses or turning one of them
+   in a way nobody has before.
+
+Winner-first: the field is 426 entries and blind (no scores visible), so the
+target is the house baseline — the 3 fixed anchor texts judged alongside
+entries in every heat. The entry must beat a strong anchor, so it needs a
+real setup -> twist structure with a twist every developer recognises, not a
+worn excuse ("works on my machine", "it was DNS", "must be the cache").
+
+Work done in this session:
+- Drafted 5 candidate excuses (A–E in NOTES.md), scored each 1–5 against
+  the five judge criteria, and picked A — "I tested it thoroughly — against
+  the one user who behaves exactly like me." — the only candidate scoring 5
+  on every criterion: "tested it thoroughly" promises rigour, the twist
+  reveals the test population was the developer himself, it is words a
+  developer would actually say, and it is tight at 74 characters.
+- Wrote main.py (v1 with the excuse), then revised the module docstring in
+  a later edit to record why the line wins, so the entry takes its final
+  content from at least two write/edit messages.
+- README from the requirements readme_template (3 live make.fun badges,
+  bounty link, referral footer code eqkgefdh), MIT LICENSE with an
+  SPDX-License-Identifier: MIT line.
+- Repo: github.com/georgeonweb3/makefun-judge-laugh-developer (new, public,
+  created after the competition opened).
+
+Gate checks to respect: /output/entry.txt must be UTF-8 text of 1–200
+characters, not only whitespace; the excuse must be a single line and an
+original text (never byte-identical to a house reference text).
